@@ -35,7 +35,7 @@ const ChatBot = () => {
     try {
       alert("AI is thiksing...")
   
-      const response = await fetch("http://10.148.1.13:5000/", {
+      const response = await fetch("https://stusybots.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
