@@ -1,12 +1,12 @@
 import express from "express";
-//import * as dotenv from "dotenv";
+import * as dotenv from "dotenv";
 import cors from "cors";
 import { Configuration, OpenAIApi } from "openai";
 
-//dotenv.config();
+dotenv.config();
 
 const configuration = new Configuration({
-  apiKey:"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", //process.env.OPENAI_API_KEY,
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
@@ -17,13 +17,13 @@ app.use(express.json());
 
 app.get("/", async (req, res) => {
   res.status(200).send({
-    message: "Hello from CodeX!",
+    message: "Good jobs",
   });
 });
 
 app.post("/", async (req, res) => {
   try {
-    const prompt = req.body.prompt;
+    const {prompt} = req.body;
 
     const response = await openai.createCompletion({
       model: "text-davinci-003",
@@ -43,6 +43,6 @@ app.post("/", async (req, res) => {
   }
 });
 
-app.listen(5000, () =>
-  console.log("AI server started on http://localhost:5000")
+app.listen(3001, () =>
+  console.log("AI server started")
 );
