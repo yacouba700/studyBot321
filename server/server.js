@@ -20,7 +20,7 @@ app.get('/', async (req, res) => {
     message: 'Hello from CodeX!'
   })
 })
-
+/*
 app.post('/', async (req, res) => {
   try {
     const prompt = req.body.prompt;
@@ -34,7 +34,7 @@ app.post('/', async (req, res) => {
       frequency_penalty: 0.5, // Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.
       presence_penalty: 0, // Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.
     });
-
+*/
     res.status(200).send({
       bot: "Désolé ! votre quota a été épuisé" //response.data.choices[0].text
     });
