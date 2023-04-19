@@ -36,7 +36,7 @@ app.post('/', async (req, res) => {
     });
 
     res.status(200).send({
-      bot: response.data.choices[0].text
+      bot: "Désolé ! votre quota a été épuisé" //response.data.choices[0].text
     });
 
   } catch (error) {
