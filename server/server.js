@@ -20,11 +20,11 @@ app.get('/', async (req, res) => {
     message: 'Hello from CodeX!'
   })
 })
-/*
+
 app.post('/', async (req, res) => {
   try {
     const prompt = req.body.prompt;
-
+/*
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `${prompt}`,
